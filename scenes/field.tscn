@@ -1,0 +1,370 @@
+[gd_scene load_steps=10 format=3 uid="uid://dg503qi6t6y1o"]
+
+[ext_resource type="PackedScene" uid="uid://b8l20cd5ueyii" path="res://scenes/wall.tscn" id="1_gy4go"]
+[ext_resource type="Script" path="res://scenes/field.gd" id="1_oi6nu"]
+[ext_resource type="PackedScene" uid="uid://ik1gc82k2qmr" path="res://scenes/ceiling.tscn" id="2_lntwg"]
+[ext_resource type="PackedScene" uid="uid://bxpqye2mesc8d" path="res://scenes/paddle.tscn" id="3_rhrc0"]
+[ext_resource type="PackedScene" uid="uid://ke8dqoaneibg" path="res://scenes/ball.tscn" id="4_katfy"]
+[ext_resource type="PackedScene" uid="uid://bb483prd5ouas" path="res://scenes/brick.tscn" id="5_126kl"]
+[ext_resource type="PackedScene" uid="uid://bsp0h01i5twb0" path="res://scenes/game_over_screen.tscn" id="7_fpng8"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_kf0cr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w8pu0"]
+size = Vector2(400, 20)
+
+[node name="Field" type="Node2D"]
+script = ExtResource("1_oi6nu")
+
+[node name="Background" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(200, 240)
+texture = SubResource("CanvasTexture_kf0cr")
+region_enabled = true
+region_rect = Rect2(0, 0, 400, 480)
+
+[node name="WallRight" parent="." instance=ExtResource("1_gy4go")]
+position = Vector2(5, 240)
+
+[node name="WallLeft" parent="." instance=ExtResource("1_gy4go")]
+position = Vector2(395, 240)
+
+[node name="Ceiling" parent="." instance=ExtResource("2_lntwg")]
+position = Vector2(200, 5)
+
+[node name="Paddle" parent="." instance=ExtResource("3_rhrc0")]
+position = Vector2(200, 470)
+
+[node name="Ball" parent="." instance=ExtResource("4_katfy")]
+position = Vector2(200, 250)
+
+[node name="Bricks" type="Node2D" parent="."]
+
+[node name="Brick" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(25, 150)
+
+[node name="Brick2" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(60, 150)
+
+[node name="Brick3" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(95, 150)
+
+[node name="Brick4" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(130, 150)
+
+[node name="Brick5" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(165, 150)
+
+[node name="Brick6" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(200, 150)
+
+[node name="Brick7" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(235, 150)
+
+[node name="Brick8" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(270, 150)
+
+[node name="Brick9" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(305, 150)
+
+[node name="Brick10" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(340, 150)
+
+[node name="Brick11" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(375, 150)
+
+[node name="Brick12" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(25, 135)
+
+[node name="Brick13" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(60, 135)
+
+[node name="Brick14" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(95, 135)
+
+[node name="Brick15" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(130, 135)
+
+[node name="Brick16" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(165, 135)
+
+[node name="Brick17" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(200, 135)
+
+[node name="Brick18" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(235, 135)
+
+[node name="Brick19" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(270, 135)
+
+[node name="Brick20" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(305, 135)
+
+[node name="Brick21" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(340, 135)
+
+[node name="Brick22" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(375, 135)
+
+[node name="Brick23" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(25, 120)
+color = "yellow"
+
+[node name="Brick24" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(60, 120)
+color = "yellow"
+
+[node name="Brick25" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(95, 120)
+color = "yellow"
+
+[node name="Brick26" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(130, 120)
+color = "yellow"
+
+[node name="Brick27" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(165, 120)
+color = "yellow"
+
+[node name="Brick28" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(200, 120)
+color = "yellow"
+
+[node name="Brick29" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(235, 120)
+color = "yellow"
+
+[node name="Brick30" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(270, 120)
+color = "yellow"
+
+[node name="Brick31" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(305, 120)
+color = "yellow"
+
+[node name="Brick32" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(340, 120)
+color = "yellow"
+
+[node name="Brick33" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(375, 120)
+color = "yellow"
+
+[node name="Brick34" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(25, 105)
+color = "yellow"
+
+[node name="Brick35" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(60, 105)
+color = "yellow"
+
+[node name="Brick36" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(95, 105)
+color = "yellow"
+
+[node name="Brick37" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(130, 105)
+color = "yellow"
+
+[node name="Brick38" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(165, 105)
+color = "yellow"
+
+[node name="Brick39" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(200, 105)
+color = "yellow"
+
+[node name="Brick40" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(235, 105)
+color = "yellow"
+
+[node name="Brick41" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(270, 105)
+color = "yellow"
+
+[node name="Brick42" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(305, 105)
+color = "yellow"
+
+[node name="Brick43" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(340, 105)
+color = "yellow"
+
+[node name="Brick44" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(375, 105)
+color = "yellow"
+
+[node name="Brick45" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(25, 90)
+color = "red"
+
+[node name="Brick46" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(60, 90)
+color = "red"
+
+[node name="Brick47" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(95, 90)
+color = "red"
+
+[node name="Brick48" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(130, 90)
+color = "red"
+
+[node name="Brick49" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(165, 90)
+color = "red"
+
+[node name="Brick50" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(200, 90)
+color = "red"
+
+[node name="Brick51" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(235, 90)
+color = "red"
+
+[node name="Brick52" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(270, 90)
+color = "red"
+
+[node name="Brick53" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(305, 90)
+color = "red"
+
+[node name="Brick54" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(340, 90)
+color = "red"
+
+[node name="Brick55" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(375, 90)
+color = "red"
+
+[node name="Brick56" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(25, 75)
+color = "top_red"
+
+[node name="Brick57" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(60, 75)
+color = "top_red"
+
+[node name="Brick58" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(95, 75)
+color = "top_red"
+
+[node name="Brick59" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(130, 75)
+color = "top_red"
+
+[node name="Brick60" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(165, 75)
+color = "top_red"
+
+[node name="Brick61" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(200, 75)
+color = "top_red"
+
+[node name="Brick62" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(235, 75)
+color = "top_red"
+
+[node name="Brick63" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(270, 75)
+color = "top_red"
+
+[node name="Brick64" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(305, 75)
+color = "top_red"
+
+[node name="Brick65" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(340, 75)
+color = "top_red"
+
+[node name="Brick66" parent="Bricks" instance=ExtResource("5_126kl")]
+position = Vector2(375, 75)
+color = "top_red"
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="LifeCounter" type="MarginContainer" parent="HUD"]
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HUD/LifeCounter"]
+layout_mode = 2
+theme_override_constants/separation = -5
+
+[node name="Label" type="Label" parent="HUD/LifeCounter/VBoxContainer"]
+layout_mode = 2
+text = "Lives"
+horizontal_alignment = 2
+
+[node name="LivesAmmount" type="Label" parent="HUD/LifeCounter/VBoxContainer"]
+layout_mode = 2
+text = "3"
+horizontal_alignment = 2
+
+[node name="ScoreCounter" type="MarginContainer" parent="HUD"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -59.0
+offset_bottom = 52.0
+grow_horizontal = 0
+theme_override_constants/margin_top = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HUD/ScoreCounter"]
+layout_mode = 2
+theme_override_constants/separation = -5
+
+[node name="Label" type="Label" parent="HUD/ScoreCounter/VBoxContainer"]
+layout_mode = 2
+text = "Score
+"
+
+[node name="Score" type="Label" parent="HUD/ScoreCounter/VBoxContainer"]
+layout_mode = 2
+text = "0"
+
+[node name="HighscoreCounter" type="MarginContainer" parent="HUD"]
+anchors_preset = -1
+anchor_left = 0.7
+anchor_right = 0.7
+offset_left = -29.5
+offset_right = 29.5
+offset_bottom = 52.0
+grow_horizontal = 2
+theme_override_constants/margin_top = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HUD/HighscoreCounter"]
+layout_mode = 2
+theme_override_constants/separation = -5
+
+[node name="Label" type="Label" parent="HUD/HighscoreCounter/VBoxContainer"]
+layout_mode = 2
+text = "Highscore
+"
+
+[node name="Highscore" type="Label" parent="HUD/HighscoreCounter/VBoxContainer"]
+layout_mode = 2
+text = "0"
+
+[node name="GameOverScreen" parent="HUD" instance=ExtResource("7_fpng8")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BottomArea" type="Area2D" parent="."]
+position = Vector2(200, 490)
+collision_layer = 16
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BottomArea"]
+shape = SubResource("RectangleShape2D_w8pu0")
+
+[connection signal="ceiling_reached" from="Ceiling" to="." method="_on_ceiling_ceiling_reached"]
+[connection signal="body_entered" from="BottomArea" to="." method="_on_bottom_area_body_entered"]

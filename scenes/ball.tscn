@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://ke8dqoaneibg"]
+
+[ext_resource type="Script" path="res://scenes/ball.gd" id="1_y8o0i"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_0si6m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h42of"]
+size = Vector2(10, 10)
+
+[node name="Ball" type="RigidBody2D"]
+collision_layer = 4
+collision_mask = 11
+script = ExtResource("1_y8o0i")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("CanvasTexture_0si6m")
+region_enabled = true
+region_rect = Rect2(0, 0, 10, 10)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_h42of")

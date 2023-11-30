@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bxpqye2mesc8d"]
+
+[ext_resource type="Script" path="res://scenes/paddle.gd" id="1_dxtry"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ys1x5"]
+size = Vector2(40, 10)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_x1klb"]
+
+[node name="Paddle" type="CharacterBody2D" groups=["Paddle"]]
+collision_mask = 6
+script = ExtResource("1_dxtry")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ys1x5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 0.454902, 0, 1)
+texture = SubResource("CanvasTexture_x1klb")
+region_enabled = true
+region_rect = Rect2(0, 0, 40, 10)

@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://ik1gc82k2qmr"]
+
+[ext_resource type="Script" path="res://scenes/ceiling.gd" id="1_quvxs"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_e2j7d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t74cy"]
+size = Vector2(10, 380)
+
+[node name="Ceiling" type="StaticBody2D"]
+collision_layer = 2
+collision_mask = 5
+script = ExtResource("1_quvxs")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0, 1, 1, 1)
+texture = SubResource("CanvasTexture_e2j7d")
+region_enabled = true
+region_rect = Rect2(0, 0, 380, 10)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_t74cy")
