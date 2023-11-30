@@ -19,6 +19,8 @@ func _input(_InputEvent):
 	if Input.is_action_just_pressed("reset") and game_over:
 		Globals.unpause()
 		Globals.reset()
+		$Ball.reset_speed()
+		$Paddle.reset()
 		get_tree().reload_current_scene()
 
 func _on_bottom_area_body_entered(_body):

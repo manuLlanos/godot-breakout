@@ -1,6 +1,7 @@
 extends RigidBody2D
 
-var speed: int = 300
+const initial_speed: int = 300
+var speed: int = initial_speed
 var direction: Vector2
 var velocity: Vector2
 
@@ -39,5 +40,8 @@ func reset():
 	velocity = direction * speed
 
 func increase_speed():
-	speed += 10
+	speed += 15
 	velocity = direction * speed
+
+func reset_speed():
+	speed = initial_speed
